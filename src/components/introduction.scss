@@ -1,0 +1,47 @@
+@use "../App.scss";
+.main_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .main_introduction {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+
+    h1 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-family: "Elgoc Alt", "Times New Roman", sans-serif;
+      font-size: 10vw;
+      line-height: 0.9;
+      font-weight: 800;
+    }
+    h2 {
+      font-size: 6vw;
+    }
+  }
+}
+
+.main_pictures {
+  position: relative;
+  img {
+    max-height: 60vh;
+    max-width: auto;
+    filter: grayscale(100%) brightness(80%);
+  }
+  .profile_front {
+    position: relative;
+    z-index: 10;
+  }
+  .profile_back {
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+  }
+}

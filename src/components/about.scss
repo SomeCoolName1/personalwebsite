@@ -1,0 +1,140 @@
+@use "../App.scss";
+
+.about_section {
+  // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  //   rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  //   rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: App.$smallFont;
+  text-align: center;
+}
+
+.about_content {
+  width: 80%;
+  max-width: 500px;
+}
+
+.about_title {
+  position: relative;
+  width: 100%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  h1 {
+    font-size: 3rem;
+  }
+  .about_floating_container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    .about_floating_text {
+      padding: 15px 25px;
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+      border-radius: 50px;
+      z-index: 10;
+      box-shadow: 0 0 50px 2px rgb(103 154 204 / 30%);
+      background-image: linear-gradient(150deg, #2e72fc, #55aaff);
+    }
+  }
+}
+
+.about_text {
+  text-align: left;
+  line-height: 23px;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  margin: 0 auto;
+  text-shadow: 0 0 6px #cec9c9, 0 0 20px rgb(206 201 201 / 42%);
+  margin-bottom: 10vh;
+}
+
+.skills {
+  width: 80%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  letter-spacing: 1px;
+  margin-bottom: 10vh;
+  .skills_column {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  .skills_item {
+    background-image: linear-gradient(App.$mainBG, App.$mainBG),
+      radial-gradient(circle at top left, #2e72fc, #55aaff);
+    border: double 2.5px transparent;
+    background-clip: content-box, border-box;
+    border-radius: 10px;
+    background-origin: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+    width: 100px;
+    font-weight: bolder;
+    transition: transform 0.3s;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+    img {
+      height: 40px;
+    }
+  }
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    background: linear-gradient(
+      to right,
+      fade_out(#fff, 1) 0%,
+      fade_out(#fff, 0.7) 100%
+    );
+    content: "";
+    display: block;
+    height: 100%;
+    left: -75%;
+    position: absolute;
+    top: 0;
+    transform: skewX(-25deg);
+    width: 50%;
+    z-index: 20;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      animation: shine 0.5s;
+    }
+  }
+
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+}
