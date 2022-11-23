@@ -10,6 +10,7 @@ import reactIcon from "../assets/icons/react.png";
 import tailwindIcon from "../assets/icons/tailwind.png";
 import sassIcon from "../assets/icons/sass.png";
 import { useEffect, useRef, useState } from "react";
+import { Fade } from "react-awesome-reveal";
 
 const About = () => {
   let winHeight = (window.innerHeight * 2) / 3;
@@ -109,53 +110,56 @@ const About = () => {
           in a professional environment and under proper guidance.
         </div>
       </div>
+
       <div className="skills">
-        <div className="skills_column">
-          <div className="skills_item shine">
-            <img src={htmlIcon} alt="htmlIcon" />
-            <p>HTML</p>
+        <Fade direction="up" triggerOnce duration={1000}>
+          <div className="skills_column">
+            <div className="skills_item shine">
+              <img src={htmlIcon} alt="htmlIcon" />
+              <p>HTML</p>
+            </div>
+            <div className="skills_item shine">
+              <img src={cssIcon} alt="cssIcon" />
+              <p>CSS</p>
+            </div>
+            <div className="skills_item shine">
+              <img src={jsIcon} alt="jsIcon" />
+              <p>JS</p>
+            </div>
           </div>
-          <div className="skills_item shine">
-            <img src={cssIcon} alt="cssIcon" />
-            <p>CSS</p>
+          <div className="skills_column ">
+            <div className="skills_item shine">
+              <img src={expressIcon} alt="expressIcon" />
+              <p>HTML</p>
+            </div>
+            <div className="skills_item shine">
+              <img src={nodeIcon} alt="nodeIcon" />
+              <p>NODE.JS</p>
+            </div>
+            <div className="skills_item shine">
+              <img src={firebaseIcon} alt="firebaseIcon" />
+              <p>FIREBASE</p>
+            </div>
+            <div className="skills_item shine">
+              <img src={mongodbIcon} alt="mongoDbIcon" />
+              <p>MONGODB</p>
+            </div>
           </div>
-          <div className="skills_item shine">
-            <img src={jsIcon} alt="jsIcon" />
-            <p>JS</p>
+          <div className="skills_column">
+            <div className="skills_item shine">
+              <img src={reactIcon} alt="reactIcon" />
+              <p>REACT</p>
+            </div>
+            <div className="skills_item shine">
+              <img src={tailwindIcon} alt="tailwindIcon" />
+              <p>TAILWIND</p>
+            </div>
+            <div className="skills_item shine">
+              <img src={sassIcon} alt="sassIcon" />
+              <p>SASS</p>
+            </div>
           </div>
-        </div>
-        <div className="skills_column ">
-          <div className="skills_item shine">
-            <img src={expressIcon} alt="expressIcon" />
-            <p>HTML</p>
-          </div>
-          <div className="skills_item shine">
-            <img src={nodeIcon} alt="nodeIcon" />
-            <p>NODE.JS</p>
-          </div>
-          <div className="skills_item shine">
-            <img src={firebaseIcon} alt="firebaseIcon" />
-            <p>FIREBASE</p>
-          </div>
-          <div className="skills_item shine">
-            <img src={mongodbIcon} alt="mongoDbIcon" />
-            <p>MONGODB</p>
-          </div>
-        </div>
-        <div className="skills_column">
-          <div className="skills_item shine">
-            <img src={reactIcon} alt="reactIcon" />
-            <p>REACT</p>
-          </div>
-          <div className="skills_item shine">
-            <img src={tailwindIcon} alt="tailwindIcon" />
-            <p>TAILWIND</p>
-          </div>
-          <div className="skills_item shine">
-            <img src={sassIcon} alt="sassIcon" />
-            <p>SASS</p>
-          </div>
-        </div>
+        </Fade>
       </div>
     </div>
   );

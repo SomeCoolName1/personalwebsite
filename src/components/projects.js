@@ -28,20 +28,25 @@ const Projects = () => {
 
   return (
     <div className="projects_container">
-      <div className="projects_nav">
-        <span>Where's Waldo</span>
-        <span>Better DoIt</span>
-        <span>Memory Game</span>
-        <span>DigitalBot</span>
-      </div>
       <div className="projects_list">
-        {projectsList.map((project) => {
-          return (
-            <ProjectDisplay
-              distanceFromTop={distanceFromTop}
-              project={project}
-            />
-          );
+        {projectsList.map((project, index) => {
+          if (index % 2 === 0) {
+            return (
+              <ProjectDisplay
+                distanceFromTop={distanceFromTop}
+                project={project}
+                side="project_left"
+              />
+            );
+          } else {
+            return (
+              <ProjectDisplay
+                distanceFromTop={distanceFromTop}
+                project={project}
+                side="project_right"
+              />
+            );
+          }
         })}
         <div className="project_uma_container">
           <div className="project_title">
