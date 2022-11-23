@@ -5,6 +5,16 @@ $fontColor: #cec9c9;
 $imageWidth: 80%;
 $secondaryBG: rgba(26, 26, 26, 0.7);
 $blueGradient: linear-gradient(180deg, #2e72fc, #55aaff);
+//rgb(46,114,252) rgb(85,170,255)
+
+@mixin item_border {
+  background-image: linear-gradient($mainBG, $mainBG),
+    radial-gradient(circle at top left, #2e72fc, #55aaff);
+  border: double 2.5px transparent;
+  background-clip: content-box, border-box;
+  border-radius: 10px;
+  background-origin: border-box;
+}
 
 * {
   margin: 0;
