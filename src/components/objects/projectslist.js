@@ -20,6 +20,7 @@ export const projectsList = [
     skills: ["Sass", "Firebase", "React"],
     github:
       "https://github.com/SomeCoolName1/PhotoTagging/tree/main/phototaggingmain",
+    demo: "https://phototagging.vercel.app/gameboard",
   },
   {
     title: "Better DoIt",
@@ -30,6 +31,7 @@ export const projectsList = [
     skills: ["CSS", "React"],
     github:
       "https://github.com/SomeCoolName1/betterdoit/tree/main/BetterDoIt/betterdoit",
+    demo: "https://betterdoit-ten.vercel.app/",
   },
   {
     title: "DBZ Memory",
@@ -39,11 +41,11 @@ export const projectsList = [
       "A memory game featuring over 40 DragonBall Z characters designed to challenge the most toughest of players.",
     skills: ["Tailwind", "React"],
     github: "https://github.com/SomeCoolName1/memorygame",
+    demo: "https://dbzmemorygame.vercel.app/",
   },
   {
     title: "DigitalBot",
     image: digitalBotImage,
-
     description:
       "A discord bot that allows users to input commands to obtain up-to-date game information from Cygames' popular Japanese mobile game, ウマ娘.",
     skills: ["Node.js"],

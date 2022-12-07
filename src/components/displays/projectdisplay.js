@@ -1,11 +1,7 @@
 import { Fade } from "react-awesome-reveal";
 
 const ProjectDisplay = ({ project, side }) => {
-  let title = project.title;
-  let description = project.description;
-  let skills = project.skills;
-  let image = project.image;
-  let github = project.github;
+  let { title, image, description, skills, github, demo } = project;
 
   return (
     <Fade direction="up" triggerOnce duration={1000}>
@@ -33,13 +29,13 @@ const ProjectDisplay = ({ project, side }) => {
                 Github
               </a>
             )}
-            <a
-              href="https://github.com/SomeCoolName1/PhotoTagging/tree/main/phototaggingmain"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Demo
-            </a>
+            {demo === undefined ? (
+              <></>
+            ) : (
+              <a href={demo} target="_blank" rel="noopener noreferrer">
+                Demo
+              </a>
+            )}
           </div>
         </div>
       </div>

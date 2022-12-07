@@ -85,16 +85,18 @@ const About = () => {
       </div>
 
       <div className="about_text">
-        The first thing people ask is, why did I leave Structural Engineering?
-        Why software/web development?
+        Suck my dick a little. asfgasgaggkadkgnadfklgnklnklgnasg
         <br />
         <br />
         {reveal ? (
           <div className="hidden_text">
-            At February 2022, I decided to expand my skills as I felt my needs
-            of an environment that best utilises my creative mind and
-            problem-solving capabilities were not met, despite a lovely work
-            culture as a Structural Engineer.
+            Suck my dick
+            {/* The first thing people ask is, why did I leave Structural
+            Engineering? Why software/web development? At February 2022, I
+            decided to expand my skills as I felt my needs of an environment
+            that best utilises my creative mind and problem-solving capabilities
+            were not met, despite a lovely work culture as a Structural
+            Engineer.
             <br />
             <br />
             With this venture, I uncovered an interest, later developed into a
@@ -105,7 +107,7 @@ const About = () => {
             <br />A product built from nothing but a unique combination of
             creativity, logic, and technology brings immense satisfaction and
             excitement to me and I look forward to further developing these
-            skills in a professional environment and under proper guidance.
+            skills in a professional environment and under proper guidance. */}
           </div>
         ) : (
           ""

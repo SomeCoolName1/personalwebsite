@@ -12,13 +12,14 @@ const Contacts = () => {
       <Header section="contacts_header" title="Contact Me" />
       <Fade direction="up" triggerOnce duration={1000}>
         <div className="contacts_text">
-          My tools may be different coming from a Structural Engineering
+          suck my dick
+          {/* My tools may be different coming from a Structural Engineering
           background but the basis of providing the best service for clients in
           a team remains.
           <br />
           <br />
           As with buildings, I bring a discerning eye for patterns, creative
-          solutions, and numbers - with a passion.
+          solutions, and numbers - with a passion. */}
         </div>
         <div className="contacts_link">
           <a
