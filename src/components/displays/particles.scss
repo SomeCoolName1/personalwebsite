@@ -1,0 +1,13 @@
+#tsparticles {
+  max-width: 100vw !important;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: url("");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -100;
+  canvas {
+    max-width: 100vw !important;
+  }
+}

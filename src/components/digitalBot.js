@@ -1,15 +1,29 @@
-import ParticlesBackground from "./particles";
-import { digitalBot } from "./projectslist/projectslist";
+import ParticlesBackground from "./displays/particles";
+import { digitalBot } from "./objects/projectslist";
 import "./digitalBot.scss";
-import digitalBotImage from "../assets/projects/digitalbotimage.png";
+import digitalBotIcon from "../assets/projects/digitalboticon.png";
+import discordIcon from "../assets/projects/discord_icon.webp";
 import { useEffect, useRef, useState } from "react";
+import { Fade } from "react-awesome-reveal";
+import Header from "./displays/headerdisplay";
+import { useNavigate } from "react-router-dom";
 
 const DigitalBot = () => {
-  const { title, help, condition, CM, uma, skill, skills } = digitalBot;
+  const navigate = useNavigate();
 
+  const { title, help, condition, CM, uma, umaError, umaCMError, skill } =
+    digitalBot;
   const [distance, setDistance] = useState(0);
   const [pageHeight, setHeight] = useState(false);
   let digitalRef = useRef();
+
+  const navigateBack = () => {
+    navigate("/");
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +31,7 @@ const DigitalBot = () => {
       setHeight(rect.height);
       let divTop = rect.top;
 
-      setDistance(divTop / 4.5);
+      setDistance(divTop / 5);
     };
 
     window.addEventListener("scroll", handleScroll, false);
@@ -27,25 +41,20 @@ const DigitalBot = () => {
     };
   }, [distance]);
 
-  const imageStyle = {
-    transform: `translate3d(0px,  ${50 + distance * 0.9}px, 0px)`,
-  };
-
-  const textStyle = {
-    transform: `translate3d(0px, ${50 + distance * 1.05}px, 0px) `,
+  const tranformStyle = (multiplier) => {
+    return {
+      transform: `translateY(${50 + distance * multiplier}px)`,
+    };
   };
 
   return (
-    <div className="project_uma" ref={digitalRef}>
-      <div className="project_title">
-        <h2>{title}</h2>
-        <div className="project_underline" />
-      </div>
-      <div className="uma_skills">
-        <img src={skills} alt="reactIcon" />
-      </div>
-      <div className="project_uma_description">
-        <div className="project_uma_text">
+    <div className="uma_container" ref={digitalRef}>
+      <button class="uma_btn_top" onClick={() => navigateBack()}>
+        Back
+      </button>
+      <Header section="uma_header" title={title} />
+      <Fade triggerOnce duration={1500}>
+        <p className="uma_content">
           The passion project that uncovered my interest in web development.
           <br />
           <br />
@@ -53,90 +62,103 @@ const DigitalBot = () => {
           game information from Cygames' popular Japanese mobile game, ウマ娘.
           <br />
           <br />
-          The project fetches data from the game's constantly updating
-          <a href="https://www.tracenacademy.com/index.html">
-            {" "}
-            game files.
-          </a>{" "}
-          The bot extracts key information from the JSON files and outputs it in
-          an easy to read embedded format for users, enabling both Japanese and
-          English search functions. <br />
+          The project fetches data from the game's constantly updating{" "}
+          <a
+            href="https://www.tracenacademy.com/index.html"
+            style={{ color: "#55aaff" }}
+          >
+            game files
+          </a>
+          . The bot extracts key information from the JSON files and outputs it
+          in an easy to read embedded format for users, enabling both Japanese
+          and English search functions. <br />
           <br /> Ultimately, my goal was to allow ease of access of key
           information for users while playing the game, with more functions to
           be added.
-        </div>
-      </div>
+        </p>
+      </Fade>
       <div className="showcase_container">
         <div className="showcase showcase_left">
-          <img src={help} style={imageStyle} />
-
-          <p style={textStyle}>
-            Displays the list of all DigitalBot commands, with more to come.
+          <img src={help} style={tranformStyle(1)} className="showcase_image" />
+          <p style={tranformStyle(1.05)}>
+            Displays the list of all available DigitalBot commands, with more to
+            come.
           </p>
         </div>
         <div className="showcase showcase_right">
-          <img src={CM} style={imageStyle} />
-          <p style={textStyle}>
-            Displays relevant information for the monthly Champions Meeting (an
-            important PvP event)
+          <img src={CM} style={tranformStyle(1)} className="showcase_image" />
+          <p style={tranformStyle(1.05)}>
+            Displays relevant information for the monthly PVP Champions Meeting
           </p>
         </div>
         <div className="showcase showcase_left">
-          <img src={uma} style={imageStyle} />
-          <p style={textStyle}>
+          <img src={uma} style={tranformStyle(1)} className="showcase_image" />
+          <p style={tranformStyle(1.05)}>
             Display all relevant UMA information, including innate stat bonuses,
             track aptitudes and skills
           </p>
         </div>
         <div className="showcase showcase_right">
-          <img src={skill} style={imageStyle} />
-          <p style={textStyle}>
+          <img
+            src={skill}
+            style={tranformStyle(1)}
+            className="showcase_image"
+          />
+          <p style={tranformStyle(1.05)}>
             Search all matching skills to display their description and trigger
             conditions
           </p>
         </div>
         <div className="showcase showcase_left">
-          <img src={condition} style={imageStyle} />
-          <p style={textStyle}>
-            Search for skill trigger conditions to display more specific
-            information to understand how it works
+          <img
+            src={condition}
+            style={tranformStyle(1)}
+            className="showcase_image"
+          />
+          <p style={tranformStyle(1.05)}>
+            Search for skill trigger conditions to display specific information
+            to understand how it works
           </p>
         </div>
+        <img
+          src={digitalBotIcon}
+          className="float_right float_icon"
+          alt="float_icon"
+          style={{
+            transform: `translateY(${pageHeight / 1.5 + distance * 3}px)`,
+          }}
+        />
+        <img
+          src={digitalBotIcon}
+          className="float_left float_icon"
+          alt="float_icon"
+          style={{
+            transform: `translateY( ${pageHeight / 4 + distance * 3}px)`,
+          }}
+        />
+        <div className="showcase_error" style={tranformStyle(1.1)}>
+          <p className="showcase_error_text">Error Messages Included</p>
+          <img src={umaCMError} className="showcase_image cm_error" />
+          <img src={umaError} className="showcase_image uma_error" />
+        </div>
       </div>
-      <div
-        className="uma_button_container"
-        style={{
-          transform: `translate3d(0px, ${distance / 2}px, 0px)`,
-        }}
-      >
-        <button class="uma_btn btn-shadow btn-shadow--blue">
-          <span>Return to main</span>
-        </button>
-        <button class="uma_btn btn-shadow btn-shadow--blue">
-          <span>To Top</span>
-        </button>
-      </div>
-      <img
-        src={digitalBotImage}
-        className="float_icon_right float_icon"
-        alt="float_icon"
-        style={{
-          transform: `translate3d(0px, ${
-            pageHeight / 1.5 + distance * 2
-          }px, 0px)`,
-        }}
-      />
 
-      <img
-        src={digitalBotImage}
-        className="float_icon_left float_icon"
-        alt="float_icon"
-        style={{
-          transform: `translate3d(0px, ${
-            pageHeight / 4 + distance * 2
-          }px, 0px)`,
-        }}
-      />
+      <div style={tranformStyle(0.5)}>
+        <div className="icon_container">
+          <div className="digital_name">DigitalBot</div>
+          <img src={digitalBotIcon} className="digital_icon" />
+          <img src={discordIcon} className="discord_icon" />
+        </div>
+        <div className="uma_button_container">
+          <button class="uma_btn" onClick={() => navigateBack()}>
+            Return to main
+          </button>
+          <button class="uma_btn" onClick={() => scrollToTop()}>
+            To Top
+          </button>
+        </div>
+      </div>
+      <div className="float_icon">Searchable in 日本語</div>
       <ParticlesBackground />
     </div>
   );

@@ -1,22 +1,21 @@
 import { Fade } from "react-awesome-reveal";
 
-const ProjectDisplay = ({ distanceFromTop, project, side }) => {
+const ProjectDisplay = ({ project, side }) => {
   let title = project.title;
   let description = project.description;
   let skills = project.skills;
-  let gif = project.gif;
   let image = project.image;
   let github = project.github;
 
   return (
-    <Fade direction="up" triggerOnce duration={2000}>
-      <div className={`project ${side}`}>
+    <Fade direction="up" triggerOnce duration={1000}>
+      <div className={`project ${side} ${title}`}>
         <div className="project_image_container">
           <img src={image} alt="project" className="image" />
         </div>
         <div className="project_content">
           <div className="project_title">
-            <p>Feature Project</p>
+            <p>Featured Project</p>
             <h2>{title}</h2>
             <div className="project_underline" />
           </div>
@@ -27,21 +26,19 @@ const ProjectDisplay = ({ distanceFromTop, project, side }) => {
             })}
           </div>
           <div className="project_links">
-            <a
-              href={github}
-              className="contacts_info"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Github</span>
-            </a>
+            {github === "/digitalbot" ? (
+              <a href={github}>Showcase</a>
+            ) : (
+              <a href={github} target="_blank" rel="noopener noreferrer">
+                Github
+              </a>
+            )}
             <a
               href="https://github.com/SomeCoolName1/PhotoTagging/tree/main/phototaggingmain"
-              className="contacts_info"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>Live Demo</span>
+              Demo
             </a>
           </div>
         </div>
