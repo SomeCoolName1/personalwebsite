@@ -1,14 +1,13 @@
 const particlesConfig = {
   fullScreen: {
-    enable: true,
-    zIndex: 1,
+    enable: false,
   },
   particles: {
     number: {
-      value: 20,
+      value: 15,
       density: {
         enable: true,
-        value_area: 400,
+        value_area: 250,
       },
     },
     color: {
@@ -22,8 +21,8 @@ const particlesConfig = {
       random: true,
       anim: {
         enable: true,
-        speed: 1,
-        opacity_min: 0,
+        speed: 0.5,
+        opacity_min: 0.1,
         sync: false,
       },
     },
@@ -72,28 +71,12 @@ const particlesConfig = {
       resize: true,
     },
     modes: {
-      grab: {
-        distance: 400,
-        line_linked: {
-          opacity: 1,
-        },
-      },
       bubble: {
-        distance: 250,
+        distance: 200,
         size: 0,
         duration: 2,
         opacity: 0,
         speed: 3,
-      },
-      repulse: {
-        distance: 400,
-        duration: 0.4,
-      },
-      push: {
-        particles_nb: 4,
-      },
-      remove: {
-        particles_nb: 2,
       },
     },
   },

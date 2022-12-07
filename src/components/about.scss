@@ -1,9 +1,6 @@
 @use "../App.scss";
 
-.about_section {
-  // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-  //   rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-  //   rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.about_container {
   width: 100%;
   height: auto;
   display: flex;
@@ -14,19 +11,11 @@
   text-align: center;
 }
 
-.about_content {
-  width: 80%;
-  max-width: 500px;
-}
-
-.about_title {
+.about_header {
   position: relative;
   width: 100%;
   margin-top: 10vh;
   margin-bottom: 10vh;
-  h1 {
-    font-size: 3rem;
-  }
   .about_floating_container {
     position: absolute;
     display: flex;
@@ -40,23 +29,70 @@
     .about_floating_text {
       padding: 15px 25px;
       font-size: 1rem;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
       border-radius: 50px;
       z-index: 10;
       box-shadow: 0 0 50px 2px rgb(103 154 204 / 30%);
-      background-image: linear-gradient(150deg, #2e72fc, #55aaff);
+      background-image: App.$blueGradient;
     }
   }
 }
 
+.about_title {
+  @include App.headers;
+}
+
 .about_text {
+  width: 80%;
+  max-width: 500px;
   text-align: left;
-  line-height: 23px;
-  letter-spacing: 0.5px;
   font-size: 1rem;
   margin: 0 auto;
   text-shadow: 0 0 6px #cec9c9, 0 0 20px rgb(206 201 201 / 42%);
   margin-bottom: 10vh;
+}
+.hidden_text {
+  animation: 0.9s rollout;
+}
+
+@keyframes rollout {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100;
+  }
+}
+
+.text_button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.arrow-down {
+  display: block;
+  margin: 0 auto;
+  width: 10px;
+  height: 38px;
+}
+.arrow-down:after {
+  content: "";
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid App.$lightBlue;
+  border-right: 2px solid App.$lightBlue;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .skills {
@@ -65,8 +101,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  letter-spacing: 1px;
   margin-bottom: 10vh;
+  text-transform: uppercase;
   .skills_column {
     display: flex;
     text-align: center;
@@ -76,12 +112,7 @@
     }
   }
   .skills_item {
-    background-image: linear-gradient(App.$mainBG, App.$mainBG),
-      radial-gradient(circle at top left, #2e72fc, #55aaff);
-    border: double 2.5px transparent;
-    background-clip: content-box, border-box;
-    border-radius: 10px;
-    background-origin: border-box;
+    @include App.item_border;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,9 +123,7 @@
     width: 100px;
     font-weight: bolder;
     transition: transform 0.3s;
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
+    margin-bottom: 15px;
     &:hover {
       transform: scale(1.1);
     }
