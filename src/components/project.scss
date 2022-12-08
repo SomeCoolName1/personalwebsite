@@ -131,9 +131,10 @@ $transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   font-size: 1.1rem;
   .project_underline {
     position: absolute;
-    bottom: -3%;
+    bottom: -13%;
     left: 45%;
     width: 60%;
+    opacity: 95%;
     background: App.$blueGradient;
     height: 20%;
     z-index: -1;

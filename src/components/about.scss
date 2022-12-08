@@ -48,7 +48,7 @@
   text-align: left;
   font-size: 1rem;
   margin: 0 auto;
-  text-shadow: 0 0 6px #cec9c9, 0 0 20px rgb(206 201 201 / 42%);
+  text-shadow: App.$textShadow;
   margin-bottom: 10vh;
 }
 .hidden_text {
