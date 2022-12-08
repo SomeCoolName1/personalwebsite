@@ -85,36 +85,42 @@ const About = () => {
       </div>
 
       <div className="about_text">
-        Suck my dick a little. asfgasgaggkadkgnadfklgnklnklgnasg
+        From Structural Engineering to Software Development, I bring forth a
+        unique outlook on developing solutions for the most complex of problem
+        while being continually driven for personal growth.
         <br />
         <br />
         {reveal ? (
           <div className="hidden_text">
-            Suck my dick
-            {/* The first thing people ask is, why did I leave Structural
-            Engineering? Why software/web development? At February 2022, I
-            decided to expand my skills as I felt my needs of an environment
-            that best utilises my creative mind and problem-solving capabilities
-            were not met, despite a lovely work culture as a Structural
-            Engineer.
+            {/* <div className="line_seperator" style={{ textAlign: `center` }}>
+              - - - - - - - - - - - - - - - - - - - - - - - -
+            </div>
+            <br /> */}
+            The first thing people ask is, why did I leave Structural
+            Engineering? Why software/web development?
+            <br />
+            <br />
+            On February 2022, I felt my needs of an environment that best
+            utilises my creative mind and problem-solving capabilities were not
+            met as a Structural Engineer.
             <br />
             <br />
             With this venture, I uncovered an interest, later developed into a
             passion, for programming with my first project being DigitalBot
-            (which I recently refactored after going through The Odin Project as
-            it was poorly optimised being my first project).
+            (recently refactored due to poor optimisation, being my first
+            project).
             <br />
             <br />A product built from nothing but a unique combination of
-            creativity, logic, and technology brings immense satisfaction and
-            excitement to me and I look forward to further developing these
-            skills in a professional environment and under proper guidance. */}
+            creativity, logic, and technology brings immense satisfaction to me
+            and I look forward to further developing these skills in a
+            professional environment.
           </div>
         ) : (
           ""
         )}
         {!reveal ? (
           <button className="text_button" onClick={() => revealInfo()}>
-            Reveal More
+            Still Interested? Read More
             <div className="arrow-down" />
           </button>
         ) : (

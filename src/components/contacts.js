@@ -3,23 +3,22 @@ import { Fade } from "react-awesome-reveal";
 import Header from "./displays/headerdisplay";
 
 const Contacts = () => {
-  // const scrollToTop = () => {
-  //   window.scrollTo({ top: 0, behavior: "smooth" });
-  // };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="contacts_container">
       <Header section="contacts_header" title="Contact Me" />
       <Fade direction="up" triggerOnce duration={1000}>
         <div className="contacts_text">
-          suck my dick
-          {/* My tools may be different coming from a Structural Engineering
-          background but the basis of providing the best service for clients in
-          a team remains.
+          My tools may be different coming from a Structural Engineering
+          background but the basis of providing the best solution in a team
+          remains.
           <br />
           <br />
-          As with buildings, I bring a discerning eye for patterns, creative
-          solutions, and numbers - with a passion. */}
+          As with buildings, I bring forth a discerning eye for patterns and
+          creative solutions for complex problems - with a passion.
         </div>
         <div className="contacts_link">
           <a
@@ -65,10 +64,10 @@ const Contacts = () => {
             </form>
           </div>
         </div>
-        {/* <button className="top_link" onClick={() => scrollToTop()}>
-          Back to top
-        </button> */}
       </Fade>
+      <button className="top_link" onClick={() => scrollToTop()}>
+        Back to top
+      </button>
     </div>
   );
 };

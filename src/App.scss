@@ -5,6 +5,7 @@ $secondaryBG: rgba(26, 26, 26, 0.7);
 $blueGradient: linear-gradient(180deg, #2e72fc, #55aaff);
 $lightBlue: rgb(85, 170, 255);
 $darkBlue: rgb(46, 114, 252);
+$textShadow: 0 0 3px #cec9c9, 0 0 20px rgb(206 201 201 / 40%);
 
 @font-face {
   font-family: "Play Fair";
@@ -60,4 +61,15 @@ $darkBlue: rgb(46, 114, 252);
 
 .home_container {
   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  background-color: $mainBG;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  width: 2px;
+  background-color: $lightBlue;
 }

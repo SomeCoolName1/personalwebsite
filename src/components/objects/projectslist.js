@@ -17,9 +17,8 @@ export const projectsList = [
 
     description:
       "A web game based on the popular Where's Waldo books. Choose from six unique boards to find 5 beloved characters with player's highscores stored in a Firebase Database.",
-    skills: ["Sass", "Firebase", "React"],
-    github:
-      "https://github.com/SomeCoolName1/PhotoTagging/tree/main/phototaggingmain",
+    skills: ["Redux", "Sass", "Firebase", "React"],
+    github: "https://github.com/SomeCoolName1/PhotoTagging",
     demo: "https://phototagging.vercel.app/gameboard",
   },
   {
@@ -29,8 +28,7 @@ export const projectsList = [
     description:
       "A web tool that allows users to keep track of tasks with customisable project folders stored into the users local database.",
     skills: ["CSS", "React"],
-    github:
-      "https://github.com/SomeCoolName1/betterdoit/tree/main/BetterDoIt/betterdoit",
+    github: "https://github.com/SomeCoolName1/betterdoit/tree/main/BetterDoIt",
     demo: "https://betterdoit-ten.vercel.app/",
   },
   {

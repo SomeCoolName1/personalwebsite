@@ -18,7 +18,7 @@ $thirdBreakPoint: 1050px;
   max-width: 500px;
   margin: 0 auto;
   text-align: left;
-  text-shadow: 0 0 6px #cec9c9, 0 0 20px rgb(206 201 201 / 42%);
+  text-shadow: App.$textShadow;
 }
 
 .contacts_link {
@@ -92,15 +92,26 @@ $thirdBreakPoint: 1050px;
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
     &:hover {
       background: App.$mainBG;
       border-color: #fff;
-      transition: all 0.5s ease-in-out;
     }
   }
 }
 
 .contacts_header {
   @include App.headers;
+}
+
+.top_link {
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 1vh;
+  color: App.$lightBlue;
+  text-shadow: 0 0 6px App.$lightBlue, 0 0 20px rgb(206 201 201 / 42%);
+  z-index: 100;
+  cursor: pointer;
 }
