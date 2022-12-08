@@ -62,16 +62,17 @@ const DigitalBot = () => {
           game information from Cygames' popular Japanese mobile game, ウマ娘.
           <br />
           <br />
-          The project fetches data from the game's constantly updating{" "}
+          The project fetches data from the game's constantly updating game
+          files, obtained through a{" "}
           <a
             href="https://www.tracenacademy.com/index.html"
             style={{ color: "#55aaff" }}
           >
-            game files
+            community API
           </a>
-          . The bot extracts key information from the JSON files and outputs it
-          in an easy to read embedded format for users, enabling both Japanese
-          and English search functions. <br />
+          . The bot extracts key information from JSON files and outputs it in
+          an easy-to-read embedded format for users, enabling both Japanese and
+          English search functions. <br />
           <br /> Ultimately, my goal was to allow ease of access of key
           information for users while playing the game, with more functions to
           be added.
@@ -120,12 +121,20 @@ const DigitalBot = () => {
             to understand how it works
           </p>
         </div>
+        {/* <img
+          src={digitalBotIcon}
+          className="float_right float_icon"
+          alt="float_icon"
+          style={{
+            transform: `translateY(${pageHeight / 2.1}px)`,
+          }}
+        />
         <img
           src={digitalBotIcon}
           className="float_right float_icon"
           alt="float_icon"
           style={{
-            transform: `translateY(${pageHeight / 1.5 + distance * 3}px)`,
+            transform: `translateY(${pageHeight / 2.1}px)`,
           }}
         />
         <img
@@ -133,9 +142,9 @@ const DigitalBot = () => {
           className="float_left float_icon"
           alt="float_icon"
           style={{
-            transform: `translateY( ${pageHeight / 4 + distance * 3}px)`,
+            transform: `translateY( ${pageHeight / 3.5}px)`,
           }}
-        />
+        /> */}
         <div className="showcase_error" style={tranformStyle(1.1)}>
           <p className="showcase_error_text">Error Messages Included</p>
           <img src={umaCMError} className="showcase_image cm_error" />
