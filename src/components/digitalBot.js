@@ -167,7 +167,6 @@ const DigitalBot = () => {
           </button>
         </div>
       </div>
-      <div className="float_icon">Searchable in 日本語</div>
       <ParticlesBackground />
     </div>
   );
