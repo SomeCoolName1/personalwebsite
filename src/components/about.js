@@ -86,7 +86,7 @@ const About = () => {
 
       <div className="about_text">
         From Structural Engineering to Software Development, I bring forth a
-        unique outlook on developing solutions for the most complex of problem
+        unique outlook on developing solutions for the most complex of problems
         while being continually driven for personal growth.
         <br />
         <br />
