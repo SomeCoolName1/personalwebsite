@@ -24,9 +24,10 @@ $thirdBreakPoint: 1050px;
 .contacts_link {
   font-size: 9vw;
   text-align: center;
+
   a {
     display: block;
-    margin-bottom: 60px;
+    margin: 50px;
     font-weight: bold;
     text-decoration: none;
     transition: all 0.2s ease-in;
@@ -51,7 +52,7 @@ $thirdBreakPoint: 1050px;
 
 @media (min-width: $thirdBreakPoint) {
   .contacts_link {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 }
 
