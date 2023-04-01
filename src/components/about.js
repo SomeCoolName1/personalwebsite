@@ -63,7 +63,7 @@ const About = () => {
             className="about_floating_text"
             style={{
               transform: `translate3d(${-50 - distance * 2}px, ${
-                -3 + distance / 1.5
+                -30 + distance / 1.5
               }px, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(${1 + distance / 6}deg) skew(0deg, 0deg)`,
             }}
@@ -74,7 +74,7 @@ const About = () => {
             className="about_floating_text"
             style={{
               transform: `translate3d(${80 + distance * 1.5}px, ${
-                -55 + distance / 1.5
+                -75 + distance / 1.5
               }px, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(${-distance / 5}deg) skew(0deg, 0deg)`,
             }}

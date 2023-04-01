@@ -1,8 +1,11 @@
 import waldoImage from "../../assets/projects/waldoimage.png";
 import memoryImage from "../../assets/projects/memoryimage.png";
-import betterDoItImage from "../../assets/projects/betterdoitimage.png";
+import marsImage from "../../assets/projects/marsimage.gif";
 import digitalBotImage from "../../assets/projects/digitalbotimage.png";
 import nodeIcon from "../../assets/icons/nodejs.webp";
+import sassIcon from "../../assets/icons/sass.png";
+import mongoDBIcon from "../../assets/icons/mongodb.webp";
+import expressIcon from "../../assets/icons/express.png";
 import umaHelp from "../../assets/projects/umamusume/command_help.png";
 import umaCM from "../../assets/projects/umamusume/command_cm.png";
 import umaCondition from "../../assets/projects/umamusume/command_condition.gif";
@@ -22,14 +25,13 @@ export const projectsList = [
     demo: "https://phototagging.vercel.app/gameboard",
   },
   {
-    title: "Better DoIt",
-    image: betterDoItImage,
+    title: "Mars - MERN",
+    image: marsImage,
 
     description:
-      "A web tool that allows users to keep track of tasks with customisable project folders stored into the users local database.",
-    skills: ["CSS", "React"],
-    github: "https://github.com/SomeCoolName1/betterdoit/tree/main/BetterDoIt",
-    demo: "https://betterdoit-ten.vercel.app/",
+      "A social media website, inspired by Twitter and Facebook, to allow users to interact with each other with its many features.",
+    skills: ["MongoDB", "Express.js", "React", "Node.js", "Sass", "Redux"],
+    github: "https://github.com/SomeCoolName1/Mars",
   },
   {
     title: "DBZ Memory",
