@@ -48,7 +48,7 @@ const Introduction = () => {
             Tuan Pham
           </h1>
           <h1 style={travelUp} className="window_header intro_header">
-            Aspiring Web
+            Web
           </h1>
           <h1 style={travelUp} className="window_header intro_header">
             Developer
@@ -59,7 +59,7 @@ const Introduction = () => {
             Tuan
           </h1>
           <h1 style={travelRight} className="phone_header intro_header">
-            Aspiring
+            Pham
           </h1>
           <h1 style={travelLeft} className="phone_header intro_header">
             Web
