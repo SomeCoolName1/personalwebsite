@@ -96,13 +96,14 @@ const About = () => {
               - - - - - - - - - - - - - - - - - - - - - - - -
             </div>
             <br /> */}
-            The first thing people ask is, why did I leave Structural
-            Engineering? Why software/web development?
+            The first thing people ask is, why a sudden interest in web/software
+            development?
             <br />
             <br />
-            On February 2022, I felt my needs of an environment that best
-            utilises my creative mind and problem-solving capabilities were not
-            met as a Structural Engineer.
+            As someone who strives for personal development, I wanted to learn a
+            new skill that expands on my creative mind and problem-solving
+            capabilities. I decided to take a step into a world of software that
+            has become so ingrained into our daily lives.
             <br />
             <br />
             With this venture, I uncovered an interest, later developed into a
